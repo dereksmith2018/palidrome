@@ -2,22 +2,26 @@ using System;
 
 public class Program
 {
-
-   public  static void Check(string firstArray){
-    char[] ArrA = firstArray.ToCharArray();
-    char[] ArrB = new char[ArrA.Length];
-    Array.Reverse(ArrA);
-
-    for(int i = 0; i < ArrA.Length ; i++){
-      if (ArrA[i] == ArrB[i]){
+   public  static void Check(string input)
+  {
+   char[] firstArray = input.ToCharArray();
+   string reverse = String.Empty;
+   for (int i = firstArray.Length - 1; i > -1; i--)
+  {
+       reverse += firstArray[i];
+  }
+   return reverse;
+}
+   if (ArrA[i] == ArrB[i]){
         Console.WriteLine( "AAAAAA" );
         //return  true;
-      }else{
-        Console.WriteLine( "BBBBB" );
-        //return false;
+  }
+  else {
+    Console.WriteLine( "BBBBB" );
+    //return false;
       }
     }
-  }
+
 
   public static void Main()
   {
